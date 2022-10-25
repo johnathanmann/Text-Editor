@@ -1,6 +1,9 @@
 {
   "name": "JATE",
   "version": "1.0.0",
+  "engines": {
+    "node": "16.17.0"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -12,7 +15,7 @@
     "client": "cd client && npm start"
   },
   "keywords": [],
-  "author": "",
+  "author": "Johnathan Mann",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
