@@ -18,8 +18,28 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      
+      // Adding Webpack plugin to generate HTML and inject our bundles
+      new HtmlWebpackPlugin({
+        template: './index.html',
+        title: 'JATE'
+      }),
+      // TODO: Add and configure workbox plugins for a service worker and manifest file.
+      // service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      }),
+      new WebpackPwaManifest({
+        fingerprints: false,
+        inject: true,
+        name: 'text-editor',
+        short_name: 'JATE',
+        description: 'Just Another Text Editor',
+        start_url: '/',
+        publicPath: '/',
+      }),
     ],
+    
 
     module: {
       rules: [
