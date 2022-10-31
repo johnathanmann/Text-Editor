@@ -29,7 +29,7 @@ registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 registerRoute(
   ({ request }) => request.destination === 'cache',
   new CacheFirst({
-    cacheName: 'text',
+    cacheName: 'assets',
     plugins: [
       new CacheableResponsePlugin({
         statuses: [0, 200],
