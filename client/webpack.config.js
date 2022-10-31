@@ -21,16 +21,17 @@ module.exports = () => {
         title: 'JATE'
       }),
       new WebpackPwaManifest({
-        fingerprints: false,
-        inject: true,
-        name: 'JATE',
-        short_name: 'JATE',
-        description: 'Just Another Text Editor',
-        start_url: '/',
+				name: 'JATE',
+				short_name: 'JATE',
+				description: 'Just Another Text Editor',
+				display: 'standalone',
+        theme_color: '#554eb5',
+				background_color: '#554eb5',
         publicPath: '/',
-        fingerprints: false,
-				inject: true,
-      }),
+				start_url: '/',
+				fingerprints: false,
+				inject: true
+			}),
       // Service worker
       new InjectManifest({
         swSrc: './src-sw.js',
