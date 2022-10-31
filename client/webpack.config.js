@@ -15,7 +15,6 @@ module.exports = () => {
       path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
-      // Adding Webpack plugin to generate HTML and inject our bundles
       new HtmlWebpackPlugin({
         template: './index.html',
         title: 'JATE'
