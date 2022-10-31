@@ -10,8 +10,6 @@ Check out the different aspects of the project below:
 - [Heroku Page](https://dashboard.heroku.com/apps/jm-text-editor)
 - [Repository](https://github.com/johnathanmann/Text-Editor)
 
-![Screenshot of JavaScript Quiz start page](./assets/img/weather-dashboard.PNG)
-
 ## Install
 Feel free to install using GitHubs recommended clone methods or by downloading the code and opening it in your preferred text editor.
 
