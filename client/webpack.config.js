@@ -20,20 +20,22 @@ module.exports = () => {
         template: './index.html',
         title: 'JATE'
       }),
-      // Service worker
-      new InjectManifest({
-        swSrc: './src-sw.js',
-        swDest: 'src-sw.js',
-      }),
       new WebpackPwaManifest({
         fingerprints: false,
         inject: true,
-        name: 'text-editor',
+        name: 'JATE',
         short_name: 'JATE',
         description: 'Just Another Text Editor',
         start_url: '/',
         publicPath: '/',
+        fingerprints: false,
+				inject: true,
       }),
+      // Service worker
+      new InjectManifest({
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js',
+      })
     ],
     
 
